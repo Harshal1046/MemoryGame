@@ -57,7 +57,7 @@ function initGame() {
 	for (let i = 0; i < suffledCards.length; i++) {
 		let card = suffledCards[i];
 
-		card.classList.remove("show", "open", "match", "rubberBand", "shake");
+		card.classList.remove("show", "open", "match", "cardMatched", "shake");
 		card.addEventListener("click", flipCard, true);
 		deck.appendChild(card);
 	}
@@ -108,8 +108,8 @@ function flipCard(evt) {
 
 		if (_openedCard.classList[1] === card.classList[1]) {
 			setTimeout(function() {
-				card.classList.add("match", "rubberBand");
-				_openedCard.classList.add("match", "rubberBand");
+				card.classList.add("match", "cardMatched");
+				_openedCard.classList.add("match", "cardMatched");
 
 				_openedCard.classList.remove("open", "show");
 				card.classList.remove("open", "show");
