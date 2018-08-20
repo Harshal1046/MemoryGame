@@ -51,6 +51,10 @@ h1 {
     margin: 0 0 3em;
 }
 
+.deck.disabled {
+    pointer-events: none;
+}
+
 .deck .card {
     height: 125px;
     width: 125px;
@@ -69,6 +73,7 @@ h1 {
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
+    pointer-events: none;
 }
 
 .deck .card.show {
@@ -79,6 +84,11 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    pointer-events: none;
+}
+
+.deck .card.wrong {
+    background: #ef5350;
 }
 
 /*
@@ -106,4 +116,126 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+.score-panel .timer {
+    float: right;
+    margin-right: 12px;
+}
+
+/* Syles For Modal */
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.modal span i {
+    color: green;
+    font-size: 60px;
+    font-weight: lighter;
+    margin-bottom: 16px;
+}
+
+.modal h2 {
+    color: #455a64;
+    font-weight: lighter;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.modal p {
+    font-weight: lighter;
+    font-size: .85em;
+    margin: 0;
+    margin-bottom: 8px !important;
+    color: #757575;
+}
+
+.modal button {
+    width: 120px;
+    padding: 5px;
+    height: 35px;
+    color: #fff;
+    background-color: #009688;
+    font-size: .8em;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* Hidden content */
+.hidden {
+    display: none;
+}
+
+
+
+/* Responsive */
+@media screen and (min-width: 451px) and (max-width: 670px) {
+    .container {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .deck {
+        min-width: 0;
+        width: 90%;
+        min-height: 0;
+        height: auto;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .deck .card {
+        height: 105px;
+        width: 24%;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+
+    .score-panel {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .deck {
+        min-width: 0;
+        width: 90%;
+        min-height: 0;
+        height: auto;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .deck .card {
+        height: 95px;
+        width: 24%;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+
+    .score-panel {
+        width: 80%;
+    }
 }
