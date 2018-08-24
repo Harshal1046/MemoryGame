@@ -1,7 +1,4 @@
-/*
- * DOM Selectors
- */
-
+ // DOM Selectors
 document.addEventListener("DOMContentLoaded", initGame, true);
 
 document.querySelector(".restart").addEventListener("click", function() {
@@ -44,7 +41,6 @@ function shuffle(array) {
 }
 
 //   To Initialize New Game
-
 function initGame() {
 	resetGame();
 
@@ -65,7 +61,6 @@ function initGame() {
 
 
 // to restart Game
-
 function resetGame() {
 	clearTimeout(t);
 	spanTimer.textContent = "00:00:00";
@@ -89,9 +84,7 @@ function resetGame() {
 
 
 
-//  For Fliping Clicked Card
-
-
+// To display Card After Getting Clicked and to match with other identical card
 function flipCard(evt) {
 	const currentMoves = +moves.textContent;
 
@@ -145,13 +138,12 @@ function flipCard(evt) {
 
 
 //    Final Stars Depending On result
-
 function toggleStars() {
-	if (matchesCounter === 3) {
+	if (moves.textContent > 12 && moves.textContent < 18) {
 		stars[2].classList.remove("fa-star");
 		stars[2].classList.add("fa-star-o");
 		finalStars = 2;
-	} else if (matchesCounter === 6) {
+	} else if (moves.textContent > 18) {
 		stars[1].classList.remove("fa-star");
 		stars[1].classList.add("fa-star-o");
 		finalStars = 1;
@@ -159,8 +151,7 @@ function toggleStars() {
 }
 
 
-//   Result 
-
+//   To Display Result 
 function showResult() {
 	const finalMoves = moves.textContent;
 	const finalTime = spanTimer.textContent;
@@ -183,7 +174,6 @@ function showResult() {
 
 
 //  Timer
-
 function add() {
     seconds++;
     if (seconds >= 60) {
