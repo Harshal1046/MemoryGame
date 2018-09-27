@@ -10,7 +10,7 @@ Classic Memory Game
 
 ### How to play
 
-* Open <a href="https://harshal1046.github.io/MemoryGame/" target="_blank">Memory Game</a>. This is the game.
+* Click Here To Play <a href="https://harshal1046.github.io/MemoryGame/" target="_blank">Memory Game</a>.
 * Clicking on tiles will turn them over so that you can see what lies on them. 
 * Your goal is to match two tiles of the same type at a time.
 * Then try to match all pairs in as minimum moves as possible.
